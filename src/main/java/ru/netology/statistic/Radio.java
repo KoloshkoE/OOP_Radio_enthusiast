@@ -1,3 +1,5 @@
+package ru.netology.statistic;
+
 public class Radio {
     private int minAmountRadioStation = 0;
     private int maxAmountRadioStation = 10;
@@ -7,7 +9,9 @@ public class Radio {
         this.maxAmountRadioStation = maxAmountRadioStation;
         this.amountRadioStation = maxAmountRadioStation - 1;
     }
-    public Radio(){}
+
+    public Radio() {
+    }
 
     public int getMinAmountRadioStation() {
         return minAmountRadioStation;
