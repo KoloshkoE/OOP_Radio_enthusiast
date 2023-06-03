@@ -3,11 +3,11 @@ package ru.netology.statistic;
 public class Radio {
     private int minAmountRadioStation = 0;
     private int maxAmountRadioStation = 10;
-    private int amountRadioStation = maxAmountRadioStation - 1;
+    private int currentNumberRadioStation = maxAmountRadioStation - 1;
 
     public Radio(int maxAmountRadioStation) {
         this.maxAmountRadioStation = maxAmountRadioStation;
-        this.amountRadioStation = maxAmountRadioStation - 1;
+        this.currentNumberRadioStation = maxAmountRadioStation - 1;
     }
 
     public Radio() {
@@ -18,14 +18,12 @@ public class Radio {
     }
 
     public int getAmountRadioStation() {
-        return amountRadioStation;
+        return currentNumberRadioStation;
     }
 
     public void setMaxAmountRadioStation(int maxAmountRadioStation) {
         this.maxAmountRadioStation = maxAmountRadioStation;
     }
-//    public void setMaxAmountRadioStation(int maxAmountRadioStation) {
-//        this.maxAmountRadioStation = 10;
 
     private int currentVolume;
 
@@ -59,13 +57,13 @@ public class Radio {
             target = currentRadioStation - 1;
             setCurrentRadioStation(target);
         } else {
-            setCurrentRadioStation(amountRadioStation);
+            setCurrentRadioStation(currentNumberRadioStation);
         }
     }
 
     public void next() {
         int target;
-        if (currentRadioStation < amountRadioStation) {
+        if (currentRadioStation < currentNumberRadioStation) {
             target = currentRadioStation + 1;
             setCurrentRadioStation(target);
         } else {
